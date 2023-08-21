@@ -1,7 +1,7 @@
 {
-  "name": "alura-geek",
+  "name": "tecnoriver",
   "version": "1.0.0",
-  "description": "Página de e-commerce versão administrador para uma loja online de produtos geek chamada Alura Geek, que está sendo desenvolvida como resultado de um Desafio Front-End (3ª edição) exclusivo para alunos da escola de tecnologia Alura.",
+  "description": "Pagina de venta de productos de tecnologia",
   "main": "src/server.js",
   "scripts": {
     "start": "node .",
@@ -9,15 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sucodelarangela/alura-geek.git"
+    "url": "git+https://kevindoblea1.github.io/alura-porfolio/tecnoriver.git"
   },
   "keywords": [],
-  "author": "Angela Caldas",
+  "author": "Kevin Alvarenga",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sucodelarangela/alura-geek/issues"
-  },
-  "homepage": "https://github.com/sucodelarangela/alura-geek#readme",
+  "homepage": "https://kevindoblea1.github.io/tecnoriver/",
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.3",
