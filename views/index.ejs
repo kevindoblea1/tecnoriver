@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="author" content="Kevin Alvarenga" />
+    <meta
+      name="description"
+      content="E-commerce page for an online store for geek products which will be developed as result of a Front-End Challenge (3rd edition) exclusively for students of Alura Tech School."
+    />
+    <link rel="icon" href="/images/pacman.svg" type="image/icon type" />
+    <title>Alura Geek | <%- title %></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/index.css" />
+  </head>
+
+  <body>
+    <!-- Cabecera -->
+    <header class="header container">
+      <div>
+        <a class="header__logo" href="/" id="header">
+          <img
+            class="header__logo--img"
+            src="/images/logo2.svg"
+            alt="Loja Alura Geek"
+          />
+        </a>
+        <form action="/search" method="POST" class="header__form">
+          <label for="h__input" class="sr-only">
+            Escriba lo que desea encontrar
+          </label>
+          <input
+            type="search"
+            id="h__input"
+            name="search"
+            class="header__input"
+            minlength="3"
+            placeholder="Qué quieres encontrar?"
+          />
+          <button type="submit" style="display: none"></button>
+        </form>
+      </div>
+      <%- button %>
+      <!-- <a class="header__button button__void button" href="login">Login</a> -->
+      <i class="header__search icon-search"></i>
+      <i class="header__search icon-plus"></i>
+    </header>
+
+    <main>
+      <!-- The page will render the correct page according to the URL/routes -->
+      <%- include(`parts/${page}`) %>
+    </main>
+
+    <!-- Contato -->
+    <section class="contact container">
+      <div class="contact__links">
+        <a class="contact__links--logo" href="#header">
+          <img src="/images/logo.svg" alt="Loja Alura Geek" />
+        </a>
+        <ul>
+          <li><a href="#">Quiénes somos</a></li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Programa de fidelidad</a></li>
+          <li><a href="#">Nuestras tiendas</a></li>
+          <li><a href="#">Quiero ser franquiciado</a></li>
+          <li><a href="#">Anuncie aquí</a></li>          
+        </ul>
+      </div>
+
+      <form action="" class="contact__form">
+        <fieldset>
+          <legend>Habla con nosotros</legend>
+          <label for="name" class="sr-only">Escribe tu nombre:</label>
+          <input
+            id="name"
+            type="text"
+            class=""
+            data-type="contact"
+            maxlength="40"
+            placeholder="Nombre"
+            required
+          />
+          <span role="alert"></span>
+          <label for="message" class="sr-only">Escribe tu mensaje</label>
+          <textarea
+            name=""
+            id="message"
+            class=""
+            data-type="contact"
+            placeholder="Escribe tu mensaje"
+            maxlength="120"
+            required
+          ></textarea>
+          <span role="alert"></span>
+          <button type="submit" class="button__blue button">
+            Enviar Mensaje
+          </button>
+        </fieldset>
+      </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+      <a
+        href="https://kevindoblea1.github.io/Portfolio/"
+        target="_blank"
+        aria-labelledby="portfolio"
+      >
+        <i class="icon-logo"></i>
+      </a>
+      <p id="portfolio">
+        Desarrollado por Kevin Alvarenga
+        <span class="sr-only">(Ver portfolio)</span>
+      </p>
+      <p>2023</p>
+    </footer>
+
+    <!-- MODAL -->
+    <div class="modal-wrapper">
+      <div class="modal">
+        <h2>Eliminar producto</h2>
+        <p>¿Está seguro de que desea eliminar este producto?</p>
+        <form action="#" method="POST">
+          <!-- Method POST to send data do backend. The action (which will be the URL) will be defined with JS -->
+          <label class="sr-only" for="password">Confirme su contraseña de administrador</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Confirmar la contraseña"
+            required
+          />
+          <div class="buttons">
+            <div class="button button__blue cancel">Cancelar</div>
+            <button class="button button__red delete">Confirmar la contraseña</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="/scripts/main.js"></script>
+    <script type="module" src="/scripts/forms.js"></script>
+    <script src="/scripts/drag-n-drop.js"></script>
+    <script src="https://github.com/codermarcos/simple-mask-money/releases/download/v3.0.0/simple-mask-money.js"></script>
+  </body>
+</html>
